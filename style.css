@@ -1,0 +1,120 @@
+body{
+    background-color: #040404 ;   
+    background-position: center;        /* Centrado */
+    height: 100vh;
+    margin: 0;
+    color: #c8d9bf ;
+    font-family:monospace;
+}
+.logo{
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 200px;  /* Ajustá el tamaño según lo que necesites */
+    height: auto;
+}
+
+#contenedor-cards {
+  display: flex;
+  flex-wrap: wrap;         /* para que pasen a otra fila si no entran */
+  justify-content: center; /* centra horizontalmente */
+  gap: 20px;               /* espacio entre cards */
+  padding: 20px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid #00ffcc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 0 10px #00ffcc;
+}
+.contenedor {
+  background-image: url("img/portalsolo.gif");
+  background-size: 100px;
+  background-repeat: no-repeat; 
+  background-position: center;
+  height: 200px; /* ajustá la altura a tu gusto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+/* Estilos del menú */
+.menu {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid #00ffcc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffcc;
+  
+  
+}
+
+.menu li a:hover {
+  background-color: #27ae60;
+}
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-registro{
+   background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid #00ffcc;
+  border-radius: 10px;
+  padding: 30px;
+  width: 500px;
+  box-shadow: 0 0 10px #00ffcc;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+
+#form-registro input,
+#form-registro select {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+#form-registro button {
+  background-color:rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #00ffcc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+#form-registro button:hover {
+  background-color: #27ae60;
+}

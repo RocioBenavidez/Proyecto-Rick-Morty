@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Investigardor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="img/Rick_and_Morty.webp" alt="Logo" class="logo" />
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="registro.html">Crear Investigador</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contenedor">
+  <h1>Registrar Nuevo Investigador</h1>
+  </div>
+
+  <div class="form">
+  <form id="form-registro">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required />
+
+    <label for="dimension">Dimensión:</label>
+    <input type="text" id="dimension" required />
+
+    <label for="autoridad">Autoridad:</label>
+    <select id="autoridad" required>
+      <option value="">Seleccionar</option>
+      <option value="Alta">Alta</option>
+      <option value="Media">Media</option>
+      <option value="Baja">Baja</option>
+    </select>
+
+    <label for="personajes">Seleccionar IDs de amigos (ej: 1,5,10):</label>
+    <input type="text" id="personajes" placeholder="Ej: 1,5,10" required />
+
+    <button type="submit">Registrar</button>
+  </form>
+  </div>
+ <script type="module" src="js/Registro.js"></script>
+</body>
+</html>
