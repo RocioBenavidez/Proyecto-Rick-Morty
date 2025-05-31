@@ -13,3 +13,16 @@ export async function obtenerPersonajesPorIds(ids) {
     }
     
 }
+
+export async function obtenerTodosPersonajes() {
+    try {
+        const respuesta = await fetch(`https://rickandmortyapi.com/api/character`);
+        const data = await respuesta.json();
+
+        return data.results;
+
+    } catch (error) {
+        console.log(`Error en conexión con la API: ${error}`);
+    }
+    
+}

@@ -1,11 +1,15 @@
+import {obtenerTodosPersonajes} from './Api.js'
+
+crearOption();
+
 document.getElementById("form-registro").addEventListener("submit",async(e) => {
     e.preventDefault();
 
     const nombre = document.getElementById("nombre").value;
     const dimension = document.getElementById("dimension").value;
     const autoridad = document.getElementById("autoridad").value;
-    const personajesStr = document.getElementById("personajes").value;
-    const personajesIds = personajesStr.split(",").map(id => parseInt(id.trim()));
+    const personajesStr = document.getElementById("personajes");
+    const personajesIds = Array.from(personajesStr.selectedOptions).map(opt => parseInt(opt.value));
 
     let nuevoInvestigador = {
     nombre,
@@ -13,6 +17,7 @@ document.getElementById("form-registro").addEventListener("submit",async(e) => {
     autoridad,
     personajesIds
     };
+    
  
      try {
     const response = await fetch("http://localhost:3000/investigadores", {
@@ -33,6 +38,25 @@ document.getElementById("form-registro").addEventListener("submit",async(e) => {
     alert("Error en la conexión con el servidor");
   }
 
+ });
+
+  async function crearOption(){
+    const select = document.getElementById("personajes");
+
+    const personajes = await obtenerTodosPersonajes();
+
+   if (Array.isArray(personajes)) {
+    personajes.forEach(p => {
+      const option = document.createElement("option");
+      option.value = p.id;
+      option.textContent = p.name;
+      select.appendChild(option);
+    });
+  } else {
+    console.log("No llegaron personajes desde la API");
+  }
+  }
+
+
 
   
-});

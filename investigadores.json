@@ -76,6 +76,18 @@
         18,
         19
       ]
+    },
+    {
+      "id": "77ab",
+      "nombre": "Sra. Rocio",
+      "dimension": "VIA LACTEA",
+      "autoridad": "Alta",
+      "personajesIds": [
+        1,
+        2,
+        3,
+        4
+      ]
     }
   ]
 }
